@@ -1,0 +1,23 @@
+<ion-view title="Visita" 
+          hide-back-button="true" >
+    <ion-content scroll="true"
+                 overflow-scroll="true"
+                 has-bouncing="false"
+                 padding="0">
+        <h1>Visita al cliente:</h1>
+        <ion-list align="center">
+            <ion-item class="card">                
+                <button ng-click='menu.informacion()'>Información</button>
+            </ion-item>
+            <ion-item class="card">
+                <button ng-click='menu.calificacion()'>Calificación</button>
+            </ion-item>
+            <ion-item class="card">
+                <button ng-click='menu.seguir()'>Seguimiento</button>
+            </ion-item>
+            <ion-item class="card">
+                <button ng-click='menu.cerrar()'>Cerrar Visita</button>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

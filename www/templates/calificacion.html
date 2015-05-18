@@ -1,15 +1,18 @@
-<ion-view title="Ruta" hide-back-button="true" >
+<ion-view title="Visita" 
+          hide-back-button="true" >
     <ion-content scroll="true"
                  overflow-scroll="true"
                  has-bouncing="false"
                  padding="0">
+        <h1>Calificación del cliente:</h1>
         <ion-list type="card">
-            <ion-item class="card" ng-repeat="cliente in lista.clientes"
-                            ui-sref="app.lista.opcion({clienteId: cliente.id})">
+            <ion-item class="card" 
+                      ng-repeat="opcion in visita.opciones"
+                      ui-sref="app.visita.opcion({opcionId: opcion.id})">
                 <div class="row row-center item-text-wrap">
                     <div class="col col-60">
                         <div class="row">
-                            <h3 class="title">{{cliente.fecha}}</h3>
+                            <h3 class="title">{{opcion.fecha}}</h3>
                         </div>
                         <div class="row">
                             <h3 class="title">{{cliente.hora}}</h3>

@@ -1,8 +1,16 @@
-<ion-view title="Opcion">
+<ion-view title="Visita">
     <ion-content>
         <div class="card">
-            <div class="title">{{opcion.cand.partido}}</div>
-            <div class="col">{{opcion.cand.nombre}}</div>
+            <div class="title">{{opcion.cliente.fecha}} {{opcion.cliente.hora}}</div>
+            <div class="col" align="center">{{opcion.cliente.nombre}}</div>
+            <div class="col" align="center">{{opcion.cliente.empresa}}</div>
+            <div class="col" align="center">{{opcion.cliente.direccion}}</div>
         </div>
+        <button class="button button-block button-positive"
+                ng-click="opcion.cambiarVisita()">Cambiar Visita
+        </button>
+        <button class="button button-block button-positive"
+                ng-click="opcion.iniciarVisita()">Iniciar Visita
+        </button>
     </ion-content>
 </ion-view>

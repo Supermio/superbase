@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <widget id="com.ionicframework.superbase338266" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
   <name>superbase</name>
-  <description>
-        An Ionic Framework and Cordova project.
+  <description>&#xD;
+        An Ionic Framework and Cordova project.&#xD;
     </description>
-  <author email="hi@ionicframework" href="http://ionicframework.com/">
-      Ionic Framework Team
+  <author email="hi@ionicframework" href="http://ionicframework.com/">&#xD;
+      Ionic Framework Team&#xD;
     </author>
   <content src="index.html"/>
   <access origin="*"/>
@@ -16,4 +16,9 @@
   <feature name="StatusBar">
     <param name="ios-package" value="CDVStatusBar" onload="true"/>
   </feature>
+  <platform name="wp8">
+    <icon src="resources\wp8\icon\ApplicationIcon.png" width="99" height="99"/>
+    <icon src="resources\wp8\icon\Background.png" width="159" height="159"/>
+    <splash src="resources\wp8\splash\SplashScreenImage.png" width="768" height="1280"/>
+  </platform>
 </widget>

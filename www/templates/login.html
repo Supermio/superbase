@@ -1,22 +1,27 @@
 <ion-view title="Elecciones 2014" class="bar-positive">
-
+    <ion-header-bar class="bar-positive">
+        <h1 class="title">Elecciones 2014</h1>
+    </ion-header-bar>
     <div class="content has-header">
-        <div class="list">
-            <label class="item item-input item-floating-label">
-                <span class="input-label">Usuario</span>
-                <input type="text" placeholder="Usuario">
-            </label>
-            <label class="item item-input item-floating-label">
-                <span class="input-label">Clave</span>
-                <input type="password" placeholder="clave">
-            </label>
-        </div>
-        <div class="padding">
-            <button class="button button-block button-positive"
-                    ng-click="login.ingresar()">Ingresar</button>
-        </div>
-        <div class="list">
-            <p>Error message</p>
-        </div>
+        <form name="loginForm" 
+              ng-submit="loginForm.$valid && login.ingresar()"
+              novalidate>
+            <div class="list">
+                <label class="item item-input item-stacked-label">
+                    <span class="input-label">Super Usuario</span>
+                    <input ng-model="login.user.name" type="text" placeholder="Super Usuario" required>
+                </label>
+                <label class="item item-input item-stacked-label">
+                    <span class="input-label">Super Clave</span>
+                    <input ng-model="login.user.pass" type="password" placeholder="Super clave" required>
+                </label>
+            </div>
+            <div class="padding">
+                <button class="button button-block button-positive">Ingresar</button>
+            </div>
+            <div class="list">
+                <p>Error message {{loginForm.$valid}}</p>
+            </div>
+        </form>
     </div>
 </ion-view>

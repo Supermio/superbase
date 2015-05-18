@@ -1,0 +1,61 @@
+<ion-side-menus enable-menu-with-back-views="true">
+    <ion-side-menu-content>
+        <ion-nav-bar class="bar-positive"
+                     back-button-type="button-icon"
+                     back-button-icon="ion-arrow-back"
+                     animation="nav-title-slide">
+            <ion-nav-back-button>
+            </ion-nav-back-button>
+            <ion-nav-buttons side="right">
+                <button class="button icon ion-home" ui-sref="app.visita.index"> Visita</button>
+            </ion-nav-buttons>
+            <ion-nav-buttons side="left">
+                <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+                </button>
+            </ion-nav-buttons>
+        </ion-nav-bar>
+        <ion-nav-view name="menuContent"></ion-nav-view>
+    </ion-side-menu-content>
+
+    <ion-side-menu expose-aside-when="large" side="left">
+        <header class="bar bar-positive">
+            <h1 class="title">Opciones</h1>
+        </header>
+        <ion-content has-header="true">
+            <ion-list>
+                <ion-item>Super Cliente Nro X</ion-item>
+                <ion-item>
+                    <a ui-sref='app.visita.informacion'
+                       ng-click='toggleLeft()'
+                       class="item"
+                       menuClose>
+                        Información
+                    </a>
+                </ion-item>
+                <ion-item>
+                    <a ui-sref='app.visita.calificacion'
+                       ng-click='toggleLeft()'
+                       class="item"
+                       menuClose>
+                        Calificación
+                    </a>
+                </ion-item>
+                <ion-item>
+                    <a ui-sref='app.visita.seguimiento'
+                       ng-click='toggleLeft()'
+                       class="item"
+                       menuClose>
+                        Seguimiento
+                    </a>
+                </ion-item>
+                <ion-item>
+                    <a ui-sref='app.lista.index' 
+                       class="item"
+                       menuClose>
+                        Cerrar Visita
+                    </a>
+                </ion-item>
+            </ion-list>
+        </ion-content>
+    </ion-side-menu>
+</ion-side-menus>
